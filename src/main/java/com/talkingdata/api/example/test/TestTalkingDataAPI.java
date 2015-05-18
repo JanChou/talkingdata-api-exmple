@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class TestTalkingDataAPI {
     public static void main(String[] args) throws IOException {
-        //查询一段时间范围内，每日的新增用户
+        //鏌ヨ涓�娈垫椂闂磋寖鍥村唴锛屾瘡鏃ョ殑鏂板鐢ㄦ埛
         String api_url = "https://api.talkingdata.com/metrics/app/v1";
         JSONObject filter = new JSONObject();
         filter.put("start", "2015-04-01");
@@ -23,7 +23,7 @@ public class TestTalkingDataAPI {
         params.put("accesskey", "fb46*****e294be483fa*****a12be35");//accesskey should be replaced
         System.out.println(TalkingDataHttpClient.doPost(api_url, params));
 
-        //查询 version list，如果需要过滤平台可添加相应filter
+        //鏌ヨ version list锛屽鏋滈渶瑕佽繃婊ゅ钩鍙板彲娣诲姞鐩稿簲filter
         String query_url = "https://api.talkingdata.com/metrics/app/v1/versionlist";
         params = new JSONObject();
         params.put("accesskey", "fb46*****e294be483fa*****a12be35");//accesskey should be replaced
